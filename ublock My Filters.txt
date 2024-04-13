@@ -1,6 +1,3 @@
-made the following filters into custom URL list with letsblockit.
-https://get.letsblock.it/list/2d6af938-aa06-4da2-ab94-2668964c1a1e.txt
-
 ! 2/22/2019 https://www.medicinenet.com
 www.medicinenet.com###-kbjjbgz_vyn_damvhz_\/5423545\/xjinphzm\/hzyizo_1
 www.medicinenet.com###-kmdbcoVy_aho
