@@ -1,4 +1,5 @@
 made the following filters into custom URL list with github. share as raw file
+https://raw.githubusercontent.com/sam12dr21/usingfroms/main/filt.txt
 
 ! 2/22/2019 https://www.medicinenet.com
 www.medicinenet.com###-kbjjbgz_vyn_damvhz_\/5423545\/xjinphzm\/hzyizo_1
