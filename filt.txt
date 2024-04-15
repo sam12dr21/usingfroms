@@ -234,3 +234,6 @@ www.investing.com##.flex-1.md\:block.relative.rounded.shadow-workstation.z-3.hid
 
 ! 2024-04-13 duckduckgo.com browser install banner
 duckduckgo.com##.container_responsive__IDWnv.container_root__Lmrbx.desktop-homepage_heroContent__px79B
+
+! 2024-04-15 https://geriatricscareonline.org Top Banner
+geriatricscareonline.org##.header-rowone.row
