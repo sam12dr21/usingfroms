@@ -238,70 +238,73 @@ duckduckgo.com##.container_responsive__IDWnv.container_root__Lmrbx.desktop-homep
 ! 2024-04-15 https://geriatricscareonline.org Top Banner
 geriatricscareonline.org##.header-rowone.row
 
-! Title: Hide YouTube Shorts
-! Description: Hide all traces of YouTube shorts videos on YouTube
-! Version: 1.8.0
-! Last modified: 2023-01-08 20:02
-! Expires: 2 weeks (update frequency)
-! Homepage: https://github.com/gijsdev/ublock-hide-yt-shorts
-! License: https://github.com/gijsdev/ublock-hide-yt-shorts/blob/master/LICENSE.md
+! YT Homepage and Subscriptions - Hide the Shorts section
+youtube.com##[is-shorts]
+! YT Menu - Hide the Shorts button
+www.youtube.com###guide [title="Shorts"], .ytd-mini-guide-entry-renderer[title="Shorts"]
+! YT Search - Hide Shorts
+www.youtube.com##ytd-search ytd-video-renderer:has([overlay-style="SHORTS"])
+! YT Search, Channels and Sidebar or below the player - Hide the Shorts sections
+www.youtube.com##ytd-reel-shelf-renderer
+! YT Channels - Hide the Shorts tab
+www.youtube.com##[tab-title="Shorts"]
+! YT Subscriptions - Hide Shorts - Grid View
+www.youtube.com##ytd-browse[page-subtype="subscriptions"] ytd-grid-video-renderer:has([overlay-style="SHORTS"])
+! YT Subscriptions - Hide Shorts - List View
+www.youtube.com##ytd-browse[page-subtype="subscriptions"] ytd-video-renderer:has([overlay-style="SHORTS"])
+! YT Subscriptions - New Layout - Hide Shorts
+www.youtube.com##ytd-browse[page-subtype="subscriptions"] ytd-rich-item-renderer:has([overlay-style="SHORTS"])
+! YT Sidebar - Hide Shorts
+www.youtube.com###related ytd-compact-video-renderer:has([overlay-style="SHORTS"])
 
-! Hide all videos containing the phrase "#shorts"
-youtube.com##ytd-grid-video-renderer:has(#video-title:has-text(#shorts))
-youtube.com##ytd-grid-video-renderer:has(#video-title:has-text(#Shorts))
-youtube.com##ytd-grid-video-renderer:has(#video-title:has-text(#short))
-youtube.com##ytd-grid-video-renderer:has(#video-title:has-text(#Short))
+! YT Mobile - Hide the Shorts Menu button
+m.youtube.com##ytm-pivot-bar-item-renderer:has(>.pivot-shorts)
+! YT Mobile - Hide the Shorts sections
+m.youtube.com##ytm-reel-shelf-renderer
+! YT Mobile - Hide Shorts in search results
+m.youtube.com##ytm-search ytm-video-with-context-renderer:has([data-style="SHORTS"])
+! YT Mobile - Hide the Shorts button on Channels
+m.youtube.com##[tab-title="Shorts"]
 
-! Hide all videos with the shorts indicator on the thumbnail
-youtube.com##ytd-grid-video-renderer:has([overlay-style="SHORTS"])
-youtube.com##ytd-rich-item-renderer:has([overlay-style="SHORTS"])
-youtube.com##ytd-video-renderer:has([overlay-style="SHORTS"])
-youtube.com##ytd-item-section-renderer.ytd-section-list-renderer[page-subtype="subscriptions"]:has(ytd-video-renderer:has([overlay-style="SHORTS"]))
+!self promotion join now youtube
+youtube.com##ytd-popup-container > tp-yt-paper-dialog > ytd-mealbar-promo-renderer, ytd-popup-container > tp-yt-paper-dialog > yt-mealbar-promo-renderer:has-text(/Claim Offer|Join now|Not Now|No thanks|YouTube TV|live TV|Live TV|movies|sports|Try it free|unlimited DVR|watch NFL/)
 
-! Hide shorts button in sidebar
-youtube.com##ytd-guide-entry-renderer:has-text(Shorts)
-youtube.com##ytd-mini-guide-entry-renderer:has-text(Shorts)
+! Google consent, "before you continue"
+www.google.*##^script:has-text(consentCookiePayload)
+www.google.*##+js(acis, document.cookie, YES+)
+google.*##+js(aeld, DOMContentLoaded, CONSENT)
+||consent.google.com^
 
-! Hide shorts section on homepage
-youtube.com##ytd-rich-section-renderer:has(#rich-shelf-header:has-text(Shorts))
-youtube.com##ytd-reel-shelf-renderer:has(.ytd-reel-shelf-renderer:has-text(Shorts))
+!Google login dialogs on various pages
+||accounts.google.com/gsi/*$xhr,script,3p
 
-! Hide shorts tab on channel pages
-! Old style
-youtube.com##tp-yt-paper-tab:has(.tp-yt-paper-tab:has-text(Shorts))
-! New style (2023-10)
-youtube.com##yt-tab-shape:has-text(/^Shorts$/)
+! Reddit app ad
+www.reddit.com##.XPromoPopupRpl
+www.reddit.com##xpromo-new-app-selector
+www.reddit.com##.bottom-bar, .XPromoBottomBar
+www.reddit.com##.useApp,.TopNav__promoButton
+www.reddit.com##body:style(pointer-events:auto!important;)
 
-! Hide shorts in video descriptions
-youtube.com##ytd-reel-shelf-renderer.ytd-structured-description-content-renderer:has-text("Shorts remixing this video")
+! uBO Annoyances has also this:
+! https://github.com/uBlockOrigin/uAssets/issues/6826
+reddit.com##.XPromoPopup
+reddit.com##body.scroll-disabled:style(overflow: visible!important; position: static!important;)
+reddit.com##.XPromoInFeed
+amp.reddit.com##.AppSelectorModal__body
+amp.reddit.com##.upsell_banner
 
-! Remove empty spaces in grid
-youtube.com##ytd-rich-grid-row,#contents.ytd-rich-grid-row:style(display: contents !important)
+! 2022-11-11 20:20:47 CET:
+www.reddit.com##xpromo-app-selector
+www.reddit.com##body.scroll-is-blocked:style(overflow: visible!important; position: static!important;)
+www.reddit.com##+js(aeld, touchmove)
 
+! 2022-11-12 10:11:02 CET
+www.reddit.com##.XPromoPopupRplNew
 
-!!! MOBILE !!!
+! 2023-09-10 14:07:31 CEST
+www.reddit.com##body[style*="pointer-events"]:style(pointer-events:auto!important;)
+www.reddit.com##body[style*="overflow"]:style(overflow:auto!important;)
 
-! Hide all videos in home feed containing the phrase "#shorts"
-m.youtube.com##ytm-rich-item-renderer:has(#video-title:has-text(#shorts))
-m.youtube.com##ytm-rich-item-renderer:has(#video-title:has-text(#Shorts))
-m.youtube.com##ytm-rich-item-renderer:has(#video-title:has-text(#short))
-m.youtube.com##ytm-rich-item-renderer:has(#video-title:has-text(#Short))
+! Hide Reddit 'Top Broadcast Now' & 'Top livestream'
+reddit.com##a[href^="/rpan/"] > h3:has-text(/Top (livestream|broadcast)/):upward(7)
 
-! Hide all videos in subscription feed containing the phrase "#shorts"
-m.youtube.com##ytm-item-section-renderer:has(#video-title:has-text(#shorts))
-m.youtube.com##ytm-item-section-renderer:has(#video-title:has-text(#Shorts))
-m.youtube.com##ytm-item-section-renderer:has(#video-title:has-text(#short))
-m.youtube.com##ytm-item-section-renderer:has(#video-title:has-text(#Short))
-
-! Hide shorts button in the bottom navigation bar
-m.youtube.com##ytm-pivot-bar-item-renderer:has(.pivot-shorts)
-
-! Hide all videos with the shorts indicator on the thumbnail
-m.youtube.com##ytm-video-with-context-renderer:has([data-style="SHORTS"])
-
-! Hide shorts sections
-m.youtube.com##ytm-rich-section-renderer:has(ytm-reel-shelf-renderer:has(.reel-shelf-title-wrapper:has-text(Shorts)))
-m.youtube.com##ytm-reel-shelf-renderer.item:has(.reel-shelf-title-wrapper:has-text(Shorts))
-
-! Hide shorts tab on channel pages
-m.youtube.com##.single-column-browse-results-tabs>a:has-text(Shorts)
