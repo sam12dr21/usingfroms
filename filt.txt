@@ -308,3 +308,5 @@ www.reddit.com##body[style*="overflow"]:style(overflow:auto!important;)
 ! Hide Reddit 'Top Broadcast Now' & 'Top livestream'
 reddit.com##a[href^="/rpan/"] > h3:has-text(/Top (livestream|broadcast)/):upward(7)
 
+! Dec 3, 2024 https://www.gurufocus.com
+www.gurufocus.com##.paywall-shadow
