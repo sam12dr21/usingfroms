@@ -216,3 +216,6 @@ reddit.com##a[href^="/rpan/"] > h3:has-text(/Top (livestream|broadcast)/):upward
 
 ! Dec 3, 2024 https://www.gurufocus.com
 www.gurufocus.com##.paywall-shadow
+
+! Jun 7, 2025 https://www.barchart.com
+www.barchart.com##.bc-premier-new-ads-block__unlock.bc-ref-optScreen.no-print.bc-premier-new-ads-block
