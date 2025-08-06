@@ -219,3 +219,8 @@ www.gurufocus.com##.paywall-shadow
 
 ! Jun 7, 2025 https://www.barchart.com
 www.barchart.com##.bc-premier-new-ads-block__unlock.bc-ref-optScreen.no-print.bc-premier-new-ads-block
+
+! Aug 6, 2025 https://www.barchart.com
+www.barchart.com###template_6b1c2866f0cf483997f2de4e5b8d71fb
+www.barchart.com##.cnx-video-tag
+www.barchart.com##.cnx-video-wrapper
