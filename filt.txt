@@ -224,3 +224,9 @@ www.barchart.com##.bc-premier-new-ads-block__unlock.bc-ref-optScreen.no-print.bc
 www.barchart.com###template_6b1c2866f0cf483997f2de4e5b8d71fb
 www.barchart.com##.cnx-video-tag
 www.barchart.com##.cnx-video-wrapper
+
+! Nov 13, 2025 https://seekingalpha.com
+seekingalpha.com##.m-auto.px-safe-or-18.xxl\:px-safe-or-36.container
+seekingalpha.com##.pb-safe-or-24.px-24.dark\:bg-black.text-center.pt-24.bg-black-5
+seekingalpha.com##.bg-black\/30.inset-0.absolute
+seekingalpha.com##.px-safe-or-18.pb-safe.dark\:bg-black.text-center.pt-24.bg-black-5
