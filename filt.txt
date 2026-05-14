@@ -230,3 +230,10 @@ seekingalpha.com##.m-auto.px-safe-or-18.xxl\:px-safe-or-36.container
 seekingalpha.com##.pb-safe-or-24.px-24.dark\:bg-black.text-center.pt-24.bg-black-5
 seekingalpha.com##.bg-black\/30.inset-0.absolute
 seekingalpha.com##.px-safe-or-18.pb-safe.dark\:bg-black.text-center.pt-24.bg-black-5
+
+! May 1, 2026 https://infonet.upmc.com
+||infonet.upmc.com/serve/8846761885000671-6718352487167201=s1920$image
+||infonet.upmc.com/serve/8846761885000671-6718352487167201=s1920$image
+||infonet.upmc.com/serve/8846761885000671-6718352487167201=s1920$image
+infonet.upmc.com###\:lumx40\:-slide-0 > .lumx-slideshow-item.block-slideshow__item-wrapper > .block-slideshow__item > .block-page-preview--cover.block-page-preview--size-xs.block-page-preview--theme-dark.block-page-preview
+infonet.upmc.com###\:lumx40\:-slide-0 > .lumx-slideshow-item.block-slideshow__item-wrapper > .block-slideshow__item
